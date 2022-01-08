@@ -3,14 +3,9 @@ var hour = moment().format("HH");
 var day = $('#currentDay');
 var time = $('#currentTime');
 var textArea;
-// test
-hour = 11;
 
 // initailize function
 function init() {
-    console.log("init");
-    //sets the date in header
-    day.text(today);
     // loops through each row, sets background color acccording to its relative time and checks local storage for previous items
     for (let i = 9; i < 18; i++) {
         var row = (document.getElementById(i));
@@ -21,9 +16,10 @@ function init() {
         if (stored != null) {
             textArea.value = stored;
         }
-        if (hour > row.id) {
+        // set background color classes based on time
+        if (parseInt(hour) > parseInt(row.id)) {
             textArea.classList.add("past");
-        } else if (hour == row.id) {
+        } else if (parseInt(hour) == parseInt(row.id)) {
             textArea.classList.add("present");
         } else {
             textArea.classList.add("future");
@@ -33,17 +29,18 @@ function init() {
 
 // puts live clock in the header
 function setTime() {
-    time.text(moment().format("H:mm:ss a"));
+    // sets the date
+    day.text(today);
+    // sets the live time
+    time.text(moment().format("h:mm:ss a"));
     timerInterval = setInterval(function() {
-        time.text(moment().format("H:mm:ss a"));
+        time.text(moment().format("h:mm:ss a"));
     }, 1000);
-    console.log("time");
 }
 
-
+// run on click of save button
 function savePlanner(_this) {
-    console.log("save");
-    // quickly chane button to "saved!"
+    // quickly change button to "saved!"
     this.textContent = "Saved!";
     setTimeout(() => {
         this.textContent = "Save"
@@ -52,13 +49,15 @@ function savePlanner(_this) {
     var timeSlot = this.parentNode.id;
     // select textArea
     textArea = document.getElementById(timeSlot).children[1];
+    // save text area input to local storage
     localStorage.setItem(timeSlot, textArea.value);
 }
 
+// add event listeners to save buttons to run savePlanner
 document.querySelectorAll(".saveBtn").forEach(function(btn) {
     btn.addEventListener("click", savePlanner)
 })
 
+// setup the page
 init();
-
 setTime();
