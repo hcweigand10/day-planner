@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+      <p id="currentTime" class="lead"></p>
+    </header>
+    <div class="container">
+      <table>
+        <div class="row" id="9">
+          <label for="time-block" class="hour col-1">9am</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="10">
+          <label for="time-block" class="hour col-1">10am</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="11">
+          <label for="time-block" class="hour col-1">11am</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="12">
+          <label for="time-block" class="hour col-1">12pm</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="13">
+          <label for="time-block" class="hour col-1">1pm</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="14">
+          <label for="time-block" class="hour col-1">2pm</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="15">
+          <label for="time-block" class="hour col-1">3pm</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="16">
+          <label for="time-block" class="hour col-1">4pm</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        <div class="row" id="17">
+          <label for="time-block" class="hour col-1">5pm</label>
+          <textarea class="time-block col-10" rows="3"></textarea>
+          <button type="button" class="col-1 2btn btn-primary saveBtn">Save</button>
+        </div>
+        
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
